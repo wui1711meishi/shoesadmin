@@ -1,13 +1,13 @@
 -- phpMyAdmin SQL Dump
--- version 4.1.14
+-- version phpStudy 2014
 -- http://www.phpmyadmin.net
 --
--- Host: 127.0.0.1
--- Generation Time: 2018-05-22 04:02:35
--- 服务器版本： 5.6.17
--- PHP Version: 5.5.12
+-- 主机: localhost
+-- 生成日期: 2018 �?05 �?22 �?10:50
+-- 服务器版本: 5.5.47
+-- PHP 版本: 5.5.30
 
-SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET SQL_MODE="NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
 
 
@@ -17,8 +17,23 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8 */;
 
 --
--- Database: `shoes`
+-- 数据库: `shoes`
 --
+
+-- --------------------------------------------------------
+
+--
+-- 表的结构 `admin`
+--
+
+CREATE TABLE IF NOT EXISTS `admin` (
+  `id` int(10) NOT NULL DEFAULT '0',
+  `user` varchar(100) NOT NULL,
+  `pass` varchar(200) NOT NULL,
+  `name` varchar(200) NOT NULL,
+  `thumb` varchar(300) NOT NULL,
+  PRIMARY KEY (`id`)
+) ENGINE=MyISAM DEFAULT CHARSET=gbk;
 
 -- --------------------------------------------------------
 
