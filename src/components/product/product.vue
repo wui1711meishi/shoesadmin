@@ -1,6 +1,6 @@
 <template>
     <div class="product">
-        <a target="content" href="/#/addproduct">添加产品</a>
+        <a class="tjcp" target="content" href="/#/addproduct">添加产品</a>
         <el-table
                 :data="tableData"
                 border
@@ -107,5 +107,15 @@
     }
 </script>
 <style scoped lang="scss">
-
+    .tjcp{
+        background: gray;
+        border-radius: 5px;
+        color:white;
+        width:90px;
+        height:30px;
+        display: inline-block;
+        text-align: center;
+        line-height: 30px;
+        margin:10px;
+    }
 </style>
