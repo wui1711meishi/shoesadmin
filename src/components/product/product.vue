@@ -1,5 +1,6 @@
 <template>
     <div class="product">
+        <a target="content" href="/#/addproduct">添加产品</a>
         <el-table
                 :data="tableData"
                 border
@@ -90,7 +91,8 @@
         methods: {
             handleClick(row) {
                 console.log(row);
-            }
+            },
+
         },
     }
 </script>

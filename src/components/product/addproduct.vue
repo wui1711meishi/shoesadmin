@@ -1,5 +1,7 @@
 <template>
-
+    <div class="addproduct">
+        add
+    </div>
 </template>
 <script>
     export default{
