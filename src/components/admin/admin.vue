@@ -51,6 +51,11 @@
                 console.log(row);
             }
         },
+        created(){
+            this.$http.get('/api/admin').then(res=>{
+                this.tableData=res.body;
+            })
+        }
     }
 </script>
 <style scoped lang="scss">
