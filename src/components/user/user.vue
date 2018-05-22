@@ -10,7 +10,7 @@
                     width="60">
             </el-table-column>
             <el-table-column
-                    prop="name"
+                    prop="nickname"
                     label="昵称"
                     width="80">
             </el-table-column>
@@ -25,17 +25,17 @@
                     width="100">
             </el-table-column>
             <el-table-column
-                    prop="thumb"
+                    prop="img"
                     label="头像"
                     width="150">
             </el-table-column>
             <el-table-column
-                    prop="id"
+                    prop="collection"
                     label="收藏"
                     width="100">
             </el-table-column>
             <el-table-column
-                    prop="id"
+                    prop="information"
                     label="信息"
                     width="380">
             </el-table-column>
@@ -63,6 +63,11 @@
                 console.log(row);
             }
         },
+        created(){
+            this.$http.get('/api/user').then(res=>{
+                this.tableData=res.body;
+            })
+        }
     }
 </script>
 <style scoped lang="scss">

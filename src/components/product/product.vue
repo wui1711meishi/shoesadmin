@@ -16,48 +16,53 @@
                     width="100">
             </el-table-column>
             <el-table-column
-                    prop="user"
+                    prop="ename"
                     label="英文名称"
-                    width="100">
+                    width="200">
             </el-table-column>
             <el-table-column
-                    prop=""
+                    prop="price"
                     label="价格"
                     width="70">
             </el-table-column>
             <el-table-column
-                    prop="thumb"
+                    prop="description"
                     label="描述"
-                    width="200">
+                    width="300">
             </el-table-column>
             <el-table-column
-                    prop="id"
+                    prop="salecount"
                     label="销售量"
                     width="70">
             </el-table-column>
             <el-table-column
-                    prop="id"
+                    prop="fine"
                     label="精选"
                     width="50">
             </el-table-column>
             <el-table-column
-                    prop="id"
+                    prop="discount"
                     label="折扣"
                     width="80">
             </el-table-column>
             <el-table-column
-                    prop="id"
+                    prop="time"
                     label="时间"
-                    width="80">
+                    width="250">
             </el-table-column>
             <el-table-column
-                    prop="id"
+                    prop="category"
                     label="分类"
                     width="120">
             </el-table-column>
             <el-table-column
-                    prop="id"
+                    prop="label"
                     label="标签"
+                    width="200">
+            </el-table-column>
+            <el-table-column
+                    prop="img"
+                    label="图片"
                     width="100">
             </el-table-column>
             <el-table-column
@@ -94,6 +99,11 @@
             },
 
         },
+        created(){
+            this.$http.get('/api/product').then(res=>{
+                this.tableData=res.body;
+            })
+        }
     }
 </script>
 <style scoped lang="scss">

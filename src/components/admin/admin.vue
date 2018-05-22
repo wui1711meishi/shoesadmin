@@ -53,7 +53,6 @@
         },
         created(){
             this.$http.get('/api/admin').then(res=>{
-                console.log(res)
                 this.tableData=res.body;
             })
         }
