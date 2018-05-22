@@ -1,14 +1,65 @@
 <template>
     <div class="admin">
-        管理员
+        <el-table
+                :data="tableData"
+                border
+                style="width: 100%">
+            <el-table-column
+                    prop="id"
+                    label="ID"
+                    width="120">
+            </el-table-column>
+            <el-table-column
+                    prop="name"
+                    label="昵称"
+                    width="120">
+            </el-table-column>
+            <el-table-column
+                    prop="user"
+                    label="账号"
+                    width="200">
+            </el-table-column>
+            <el-table-column
+                    prop="pass"
+                    label="密码"
+                    width="200">
+            </el-table-column>
+            <el-table-column
+                    prop="thumb"
+                    label="头像"
+                    width="200">
+            </el-table-column>
+            <el-table-column
+                    fixed="right"
+                    label="操作"
+                    width="200">
+                <template slot-scope="scope">
+                    <el-button @click="handleClick(scope.row)" type="text" size="small">编辑</el-button>
+                    <el-button type="text" size="small">删除</el-button>
+                </template>
+            </el-table-column>
+        </el-table>
     </div>
 </template>
 <script>
     export default{
         name:'admin',
         data(){
-            return {}
-        }
+            return {
+                tableData: [{
+                    id: 1,
+                    name: '王小虎',
+                    user: 'admin',
+                    pass: '123456',
+                    thumb: '',
+                }]
+            }
+        },
+        methods: {
+            handleClick(row) {
+                console.log(row);
+            }
+        },
     }
 </script>
 <style scoped lang="scss">
