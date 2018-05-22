@@ -7,37 +7,57 @@
             <el-table-column
                     prop="id"
                     label="ID"
-                    width="60">
+                    width="40">
             </el-table-column>
             <el-table-column
                     prop="name"
-                    label="昵称"
-                    width="80">
+                    label="名称"
+                    width="100">
             </el-table-column>
             <el-table-column
                     prop="user"
-                    label="账号"
+                    label="英文名称"
                     width="100">
             </el-table-column>
             <el-table-column
-                    prop="pass"
-                    label="密码"
-                    width="100">
+                    prop=""
+                    label="价格"
+                    width="70">
             </el-table-column>
             <el-table-column
                     prop="thumb"
-                    label="头像"
-                    width="150">
+                    label="描述"
+                    width="200">
             </el-table-column>
             <el-table-column
                     prop="id"
-                    label="收藏"
+                    label="销售量"
+                    width="70">
+            </el-table-column>
+            <el-table-column
+                    prop="id"
+                    label="精选"
+                    width="50">
+            </el-table-column>
+            <el-table-column
+                    prop="id"
+                    label="折扣"
+                    width="80">
+            </el-table-column>
+            <el-table-column
+                    prop="id"
+                    label="时间"
+                    width="80">
+            </el-table-column>
+            <el-table-column
+                    prop="id"
+                    label="分类"
+                    width="120">
+            </el-table-column>
+            <el-table-column
+                    prop="id"
+                    label="标签"
                     width="100">
-            </el-table-column>
-            <el-table-column
-                    prop="id"
-                    label="信息"
-                    width="380">
             </el-table-column>
             <el-table-column
                     fixed="right"

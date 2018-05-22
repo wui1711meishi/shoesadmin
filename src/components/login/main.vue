@@ -52,6 +52,20 @@
               </a>
             </template>
           </el-menu-item>
+          <el-menu-item index="0">
+            <template slot="title">
+              <a target="content" href="/#/banner">
+                <i class="el-icon-menu"></i>轮播图管理
+              </a>
+            </template>
+          </el-menu-item>
+          <el-menu-item index="0">
+            <template slot="title">
+              <a target="content" href="/#/product">
+                <i class="el-icon-menu"></i>产品管理
+              </a>
+            </template>
+          </el-menu-item>
           <el-submenu index="1">
             <template slot="title"><i class="el-icon-message"></i>导航一</template>
             <el-menu-item-group>
