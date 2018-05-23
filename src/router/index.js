@@ -41,18 +41,6 @@ export default new Router({
           name: 'user',
           component: User
       },
-      //用户 购物车
-      {
-          path: '/car',
-          name: 'car',
-          component: Car
-      },
-      //用户 订单
-      {
-          path: '/order',
-          name: 'order',
-          component: Order
-      },
       //产品展示
       {
           path: '/product',
