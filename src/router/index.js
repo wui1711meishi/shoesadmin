@@ -4,8 +4,6 @@ import Main from '@/components/login/main'  //主页面
 import Welcome from '@/components/login/welcome'     //欢迎页面
 import Admin from '@/components/admin/admin'        //管理员列表页
 import User from '@/components/user/user'        //用户列表页
-import Car from '@/components/user/car/car'         //用户 购物车
-import Order from '@/components/user/order/order'         //用户 订单
 import Product from '@/components/product/product'         //产品展示
 import AddProduct from '@/components/product/addproduct'         //产品 添加
 import ChangeProduct from '@/components/product/changeproduct'         //产品 修改
