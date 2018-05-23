@@ -37,7 +37,7 @@
             <el-table-column
                     prop="information"
                     label="信息"
-                    width="380">
+                    width="340">
             </el-table-column>
         </el-table>
     </div>
@@ -49,9 +49,9 @@
             return {
                 tableData: [{
                     id: 1,
-                    nickname: '王小虎',
-                    user: 'admin',
-                    pass: '123456',
+                    nickname: '',
+                    user: '',
+                    pass: '',
                     img: '',
                     collection:'',
                     information:'',
@@ -65,7 +65,7 @@
         },
         created(){
             this.$http.get('/api/user').then(res=>{
-                this.tableData=res.body;
+                this.tableData=res.body
             })
         }
     }

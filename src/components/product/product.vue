@@ -71,7 +71,7 @@
                     width="100">
                 <template slot-scope="scope">
                     <el-button @click="handleClick(scope.row)" type="text" size="small">编辑</el-button>
-                    <el-button type="text" size="small">删除</el-button>
+                    <el-button @click="hac(scope.row)" type="text" size="small">删除</el-button>
                 </template>
             </el-table-column>
         </el-table>
@@ -95,8 +95,28 @@
         },
         methods: {
             handleClick(row) {
-                console.log(row);
+                this.$router.push({name:'changeproduct',params:{row:row}})
             },
+            hac(row){
+                let obj={id:row.id};
+                this.$http.post('/api/product/delete',obj,{headers:{"content-type":'application/json'}}).then(res=>{
+                    if(res.body=='1'){
+                        let index=this.tableData.findIndex((val,ind)=>{
+                                return val.id==obj.id;
+                        })
+                        this.tableData.splice(index,1);
+                        this.$message({
+                            message: '删除成功',
+                            type: 'success'
+                        });
+                    }else{
+                        this.$message({
+                            message: '删除失败',
+                            type: 'warning'
+                        });
+                    }
+                })
+            }
 
         },
         created(){

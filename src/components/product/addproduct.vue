@@ -24,9 +24,9 @@
 
             <el-form-item label="类别">
                 <el-select v-model="form.category" placeholder="请选择类型">
-                    <el-option label="运动鞋" value="ydx"></el-option>
-                    <el-option label="高跟鞋" value="ggx"></el-option>
-                    <el-option label="拖鞋" value="tx"></el-option>
+                    <el-option label="运动鞋" value="运动鞋"></el-option>
+                    <el-option label="高跟鞋" value="高跟鞋"></el-option>
+                    <el-option label="拖鞋" value="拖鞋"></el-option>
                 </el-select>
             </el-form-item>
 
@@ -73,9 +73,19 @@
             onSubmit() {
                 let obj=this.form;
                 this.$http.post('/api/product/add',obj,{headers:{"content-type":'application/json'}}).then(res=>{
-
+                    if(res.body=='1'){
+                        this.$message({
+                            message: '添加成功',
+                            type: 'success'
+                        });
+                        this.$router.push({name:'product'})
+                    }else{
+                        this.$message({
+                            message: '添加失败',
+                            type: 'warning'
+                        });
+                    }
                 })
-                this.$router.push({name:'product'})
             }
         }
     }

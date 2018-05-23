@@ -39,9 +39,9 @@
             return {
                 tableData: [{
                     id: 1,
-                    name: '王小虎',
-                    user: 'admin',
-                    pass: '123456',
+                    name: '',
+                    user: '',
+                    pass: '',
                     thumb: '',
                 }]
             }
