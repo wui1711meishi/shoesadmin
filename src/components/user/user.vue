@@ -53,19 +53,16 @@
         <el-dialog class="order" title="订单" :visible.sync="dialogTableVisible">
             <el-table  :data="gridData">
                 <el-table-column property="id" label="ID" width="50"></el-table-column>
-                <el-table-column property="uid" label="用户ID" width="50"></el-table-column>
-                <el-table-column property="sid" label="鞋子ID" width="50"></el-table-column>
-                <el-table-column property="color" label="颜色" width="90"></el-table-column>
-                <el-table-column property="size" label="尺码" width="70"></el-table-column>
-                <el-table-column property="count" label="数量" width="70"></el-table-column>
+                <el-table-column property="uid" label="用户ID" width="150"></el-table-column>
+                <el-table-column property="cid" label="购物车ID" width="150"></el-table-column>
                 <el-table-column property="ordernumber" label="订单号"></el-table-column>
             </el-table>
         </el-dialog>
         <el-dialog class="order" title="购物车" :visible.sync="dialogTableVisible2">
             <el-table  :data="gridData2">
                 <el-table-column property="id" label="ID" width="50"></el-table-column>
-                <el-table-column property="uid" label="用户ID" width="50"></el-table-column>
-                <el-table-column property="sid" label="鞋子ID" width="50"></el-table-column>
+                <el-table-column property="uid" label="用户ID" width="100"></el-table-column>
+                <el-table-column property="sid" label="鞋子ID" width="100"></el-table-column>
                 <el-table-column property="color" label="颜色" width="90"></el-table-column>
                 <el-table-column property="size" label="尺码" width="70"></el-table-column>
                 <el-table-column property="count" label="数量" width="70"></el-table-column>
