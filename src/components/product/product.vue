@@ -18,12 +18,12 @@
             <el-table-column
                     prop="ename"
                     label="英文名称"
-                    width="200">
+                    width="100">
             </el-table-column>
             <el-table-column
                     prop="price"
                     label="价格"
-                    width="70">
+                    width="50">
             </el-table-column>
             <el-table-column
                     prop="description"
@@ -33,37 +33,32 @@
             <el-table-column
                     prop="salecount"
                     label="销售量"
-                    width="70">
+                    width="50">
             </el-table-column>
             <el-table-column
                     prop="fine"
                     label="精选"
-                    width="50">
+                    width="60">
             </el-table-column>
             <el-table-column
                     prop="discount"
                     label="折扣"
-                    width="80">
+                    width="50">
             </el-table-column>
             <el-table-column
                     prop="time"
                     label="时间"
-                    width="250">
+                    width="120">
             </el-table-column>
             <el-table-column
                     prop="category"
                     label="分类"
-                    width="120">
+                    width="70">
             </el-table-column>
             <el-table-column
                     prop="label"
                     label="标签"
-                    width="200">
-            </el-table-column>
-            <el-table-column
-                    prop="img"
-                    label="图片"
-                    width="100">
+                    width="60">
             </el-table-column>
             <el-table-column
                     fixed="right"
@@ -82,15 +77,7 @@
         name:'product',
         data(){
             return {
-                tableData: [{
-                    id: 1,
-                    nickname: '王小虎',
-                    user: 'admin',
-                    pass: '123456',
-                    img: '',
-                    collection:'',
-                    information:'',
-                }]
+                tableData: []
             }
         },
         methods: {

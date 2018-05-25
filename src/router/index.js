@@ -7,11 +7,11 @@ import User from '@/components/user/user'        //用户列表页
 import Product from '@/components/product/product'         //产品展示
 import AddProduct from '@/components/product/addproduct'         //产品 添加
 import ChangeProduct from '@/components/product/changeproduct'         //产品 修改
-import DeleteProduct from '@/components/product/deleteproduct'         //产品 删除
 import Banner from '@/components/banner/banner'         //banner展示
 import AddBanner from '@/components/banner/addbanner'         //banner 增加
-import DeleteBanner from '@/components/banner/deletebanner'         //banner 删除
-//
+import ChangeBanner from '@/components/banner/changebanner'         //banner 删除
+import Login from '@/components/login/login'         //banner 删除
+
 
 
 import "../assets/css/basis.css"
@@ -19,8 +19,15 @@ Vue.use(Router)
 
 export default new Router({
   routes: [
+    //登录
     {
       path: '/',
+      name: 'login',
+      component: Login
+    },
+    //主页面
+    {
+      path: '/main',
       name: 'main',
       component: Main
     },
@@ -59,12 +66,7 @@ export default new Router({
           name: 'changeproduct',
           component: ChangeProduct
       },
-      //产品 删除
-      {
-          path: '/deleteproduct',
-          name: 'deleteproduct',
-          component: DeleteProduct
-      },
+
       //banner 展示
       {
           path: '/banner',
@@ -77,11 +79,12 @@ export default new Router({
           name: 'addbanner',
           component: AddBanner
       },
-      //banner 删除
+      //banner 修改
       {
-          path: '/deletebanner',
-          name: 'deletebanner',
-          component: DeleteBanner
+          path: '/changebanner',
+          name: 'changebanner',
+          component: ChangeBanner
       },
+
   ]
 })

@@ -16,34 +16,35 @@
 </template>
 
 <script>
-  export default{
-    name: 'addbanner',
+  export default {
+    name: 'changebanner',
     data(){
       return {
         form: {
+            id:'',
           input: '',
-          fileList:[]
+          fileList: []
         }
       }
     },
-    methods: {
+    methods:{
       onSubmit(){
         let obj=Object.assign({},this.form);
         obj.fileList=JSON.stringify(obj.fileList);
-        this.$http.post('/api/banner/submit', obj, {
+        this.$http.post('/api/banner/changeget', obj, {
           headers: {
             "content-type": 'application/json'
           }
         }).then(function (res) {
           if(res.body==='1'){
             this.$message({
-              message: '添加成功',
+              message: '编辑成功',
               type: 'success'
             });
             this.$router.push({name:'banner'});
           }else {
             this.$message({
-              message: '添加失败',
+              message: '编辑失败',
               type: 'success'
             });
           }
@@ -55,16 +56,20 @@
       handleSuccess(response, file, filelist){
         this.form.fileList = filelist;
       }
+    },
+    created(){
+      let id = this.$route.params['row'].id;
+        this.$http.get('/api/banner/update?id='+id).then(res=>{
+          console.log(res);
+          this.form.input=res.body[0].sid;
+          this.form.id=res.body[0].id;
+          let arr=[];
+          arr.push(JSON.parse(res.body[0].img));
+          this.form.fileList=arr;
+        })
     }
   }
 </script>
-<style scoped lang="scss">
-  .input {
-    margin-bottom: 30px;
-  }
 
-  .addBanner {
-    width: 500px;
-    margin: 100px auto;
-  }
+<style scoped lang='scss'>
 </style>
