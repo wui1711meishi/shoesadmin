@@ -38,15 +38,19 @@
     },
     methods: {
       login(){
-        let data = {username: this.username, password: this.password, code: this.code};
-        this.$http.post('/api/login', data, {
+        let obj = {username: this.username, password: this.password, code: this.code};
+        this.$http.post('/api/login', obj, {
           headers: {
             "content-type": 'application/json'
           }
         }).then(res => {
-            if (res.body != 'ok') {
-              alert(res.body)
-            } else {
+            if(res.body=='0'){
+                alert('验证码错误')
+            }else if(res.body=='1'){
+                alert('无此用户')
+            }else if(res.body=='2'){
+                alert('密码错误')
+            }else {
               this.$router.push({name: 'main'})
             }
           }
