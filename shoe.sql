@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 2018-06-01 02:59:34
+-- Generation Time: 2018-06-01 05:45:13
 -- 服务器版本： 5.7.14
 -- PHP Version: 5.6.25
 
@@ -58,8 +58,8 @@ CREATE TABLE `banner` (
 --
 
 INSERT INTO `banner` (`id`, `sid`, `img`) VALUES
-(1, 2, '{"name":"banner.png","url":"/api/banner/1527217323262banner.png"}'),
-(3, 3, '{"name":"banner2_02.png","url":"/api/banner/1527217337830banner2_02.png"}');
+(1, 2, '{"name":"banner_02.png","url":"/api/banner/1527823737914banner_02.png"}'),
+(3, 3, '{"name":"banner_02.png","url":"/api/banner/1527823749560banner_02.png"}');
 
 -- --------------------------------------------------------
 
@@ -111,12 +111,10 @@ CREATE TABLE `orders` (
 
 INSERT INTO `orders` (`id`, `ordernumber`, `name`, `price`, `img`, `color`, `size`, `num`, `sid`, `address`) VALUES
 (43, '1527698057706', '迫使分鞋', 3666, '/api/images/1527216958056dss222222.png', 'blue', '43码', 2, 46, '上海市  浦东区    金融中心大厦A栋1002室     020004    赵氏    151-3562-5443'),
-(44, '1527698132595', '打得过分鞋', 3999, '/api/images/1527216993319dss2123.png', 'green', '46码', 1, 47, '北京市  朝阳区    三里屯SOHO大厦A栋1002室     020004    李氏    151-3562-1434'),
-(45, '1527698178018', '迫使分鞋', 3666, '/api/images/1527216958056dss222222.png', 'blue', '43码', 2, 46, '上海市  浦东区    金融中心大厦A栋1002室     020004    赵氏    151-3562-5443'),
-(46, '1527755466045', '迫使分鞋', 3666, '/api/images/1527216958056dss222222.png', 'red', '41码', 1, 46, '上海市  浦东区    金融中心大厦A栋1002室     020004    赵氏    151-3562-5443'),
-(47, '1527758154853', '迫使分鞋', 3666, '/api/images/1527216958056dss222222.png', 'green', '41码', 2, 46, '上海市  浦东区    金融中心大厦A栋1002室     020004    赵氏    151-3562-5443'),
-(48, '1527817772433', '迫使分鞋', 3666, '/api/images/1527216958056dss222222.png', 'yellow', '43码', 2, 46, '上海市  浦东区    金融中心大厦A栋1002室     020004    赵氏    151-3562-5443'),
-(49, '1527819329822', '迫使分鞋', 3666, '/api/images/1527216958056dss222222.png', 'red', '41码', 1, 46, '上海市  浦东区    金融中心大厦A栋1002室     020004    赵氏    151-3562-5443');
+(50, '1527824468323', '李宁休闲鞋', 389, '/api/images/1527216578309dss1.png', 'red', '41码', 1, 52, '上海市  浦东区    金融中心大厦A栋1002室     020004    赵氏    151-3562-5443'),
+(51, '1527830582241', '鬼冢虎XV', 2600, '/api/images/1527829604794shoes-4.png', 'red', '41码', 1, 49, NULL),
+(52, '1527831404408', '李宁休闲鞋', 389, '/api/images/1527216578309dss1.png', 'red', '41码', 1, 52, '上海市  浦东区    金融中心大厦A栋1002室     020004    赵氏    151-3562-5443'),
+(53, '1527831524713', '李宁休闲鞋', 389, '/api/images/1527216578309dss1.png', 'red', '41码', 1, 52, NULL);
 
 -- --------------------------------------------------------
 
@@ -148,14 +146,14 @@ CREATE TABLE `shoes` (
 INSERT INTO `shoes` (`id`, `name`, `ename`, `price`, `description`, `salecount`, `fine`, `discount`, `time`, `category`, `label`, `img`, `bigimg`, `hot`) VALUES
 (46, '迫使分鞋', 'Joan Sprot', 3666, '迫使分鞋迫使分鞋迫使分鞋迫使分鞋迫使分鞋迫使分鞋迫使分鞋', 0, 'false', '199', '2018-05-25 02:48:08', '运动鞋', '高邦', '{"name":"dss222222.png","url":"/api/images/1527216958056dss222222.png"}--{"name":"dss222.png","url":"/api/images/1527216958064dss222.png"}', '{"name":"bigimg_03.png","url":"/api/bigimages/1527216488708bigimg_03.png"}', 'false'),
 (47, '打得过分鞋', 'Joan Sprot', 3999, '打得过分鞋打得过分鞋打得过分鞋打得过分鞋打得过分鞋', 0, 'false', '199', '2018-05-25 02:48:08', '运动鞋', '高邦', '{"name":"dss2123.png","url":"/api/images/1527216993319dss2123.png"}--{"name":"dss2951.png","url":"/api/images/1527216993321dss2951.png"}', '{"name":"bigimg_03.png","url":"/api/bigimages/1527216488708bigimg_03.png"}', 'false'),
-(48, '耐克空军1号', 'Nike Air No1', 2600, 'Nike Air No1Nike Air No1Nike Air No1Nike Air No1', 0, 'false', '243', '2018-05-25 07:21:09', '运动鞋', '气垫', '{"name":"zza1.png","url":"/api/images/1527232869405zza1.png"}--{"name":"zza2.png","url":"/api/images/1527232869412zza2.png"}--{"name":"zza23.png","url":"/api/images/1527232869417zza23.png"}', '{"name":"bigimg_03.png","url":"/api/bigimages/1527232869422bigimg_03.png"}', 'true'),
-(49, '鬼冢虎XV', 'Nike Air No1', 2600, 'Nike Air No1Nike Air No1Nike Air No1Nike Air No1', 0, 'false', '243', '2018-05-25 07:21:09', '运动鞋', '气垫', '{"name":"zza2.png","url":"/api/images/1527232869412zza2.png"}--{"name":"zza23.png","url":"/api/images/1527232869417zza23.png"}--{"name":"zza1.png","url":"/api/images/1527233115144zza1.png"}', '{"name":"bigimg_03.png","url":"/api/bigimages/1527232869422bigimg_03.png"}', 'true'),
-(50, '巴黎世家Max', 'Nike Air No1', 2600, 'Nike Air No1Nike Air No1Nike Air No1Nike Air No1', 0, 'true', '243', '2018-05-25 07:21:09', '运动鞋', '气垫', '{"name":"zza23.png","url":"/api/images/1527232869417zza23.png"}--{"name":"zza1.png","url":"/api/images/1527233136069zza1.png"}--{"name":"zza2.png","url":"/api/images/1527233136115zza2.png"}', '{"name":"bigimg_03.png","url":"/api/bigimages/1527232869422bigimg_03.png"}', 'true'),
-(51, '乔丹运动鞋', 'Joan Sprot', 1566, '乔丹运动鞋乔丹运动鞋乔丹运动鞋乔丹运动鞋乔丹运动鞋', 0, 'false', '199', '2018-05-25 02:48:08', '运动鞋', '高邦', '{"name":"dss2369.png","url":"/api/images/1527216488650dss2369.png"}--{"name":"dss2456.png","url":"/api/images/1527216488677dss2456.png"}--{"name":"dss2654.png","url":"/api/images/1527216488681dss2654.png"}', '{"name":"bigimg_03.png","url":"/api/bigimages/1527216488708bigimg_03.png"}', 'false'),
+(48, '耐克空军1号', 'Nike Air No1', 2600, 'Nike Air No1Nike Air No1Nike Air No1Nike Air No1', 0, 'false', '243', '2018-05-25 07:21:09', '运动鞋', '气垫', '{"name":"shoes-1.png","url":"/api/images/1527829493927shoes-1.png"}--{"name":"shoes-2.png","url":"/api/images/1527829493975shoes-2.png"}--{"name":"shoes-3.png","url":"/api/images/1527829493976shoes-3.png"}', '{"name":"bigimg_03.png","url":"/api/bigimages/1527232869422bigimg_03.png"}', 'true'),
+(49, '鬼冢虎XV', 'Nike Air No1', 2600, 'Nike Air No1Nike Air No1Nike Air No1Nike Air No1', 0, 'false', '243', '2018-05-25 07:21:09', '运动鞋', '气垫', '{"name":"shoes-4.png","url":"/api/images/1527829604794shoes-4.png"}--{"name":"shoes-6.png","url":"/api/images/1527829604802shoes-6.png"}--{"name":"shoes-5.png","url":"/api/images/1527829604804shoes-5.png"}', '{"name":"bigimg_03.png","url":"/api/bigimages/1527232869422bigimg_03.png"}', 'true'),
+(50, '巴黎世家Max', 'Nike Air No1', 2600, 'Nike Air No1Nike Air No1Nike Air No1Nike Air No1', 0, 'true', '243', '2018-05-25 07:21:09', '运动鞋', '气垫', '{"name":"shoes-8.png","url":"/api/images/1527829657652shoes-8.png"}--{"name":"shoes-7.png","url":"/api/images/1527829657656shoes-7.png"}', '{"name":"bigimg_03.png","url":"/api/bigimages/1527232869422bigimg_03.png"}', 'true'),
+(51, '乔丹运动鞋', 'Joan Sprot', 1566, '乔丹运动鞋乔丹运动鞋乔丹运动鞋乔丹运动鞋乔丹运动鞋', 0, 'false', '199', '2018-05-25 02:48:08', '运动鞋', '高邦', '{"name":"car-02.png","url":"/api/images/1527830025552car-02.png"}--{"name":"shoes-13.png","url":"/api/images/1527830025555shoes-13.png"}', '{"name":"bigimg_03.png","url":"/api/bigimages/1527216488708bigimg_03.png"}', 'false'),
 (52, '李宁休闲鞋', 'Joan Sprot', 389, '李宁休闲鞋李宁休闲鞋李宁休闲鞋李宁休闲鞋李宁休闲鞋李宁休闲鞋', 0, 'false', '199', '2018-05-25 02:48:08', '运动鞋', '高邦', '{"name":"dss1.png","url":"/api/images/1527216578309dss1.png"}--{"name":"dss2.png","url":"/api/images/1527216578312dss2.png"}--{"name":"dss22.png","url":"/api/images/1527216578316dss22.png"}', '{"name":"bigimg_03.png","url":"/api/bigimages/1527216488708bigimg_03.png"}', 'false'),
-(53, '耐克鞋', 'Joan Sprot', 35666, '耐克鞋耐克鞋耐克鞋耐克鞋耐克鞋耐克鞋耐克鞋耐克鞋耐克鞋耐克鞋', 0, 'false', '199', '2018-05-25 02:48:08', '运动鞋', '高邦', '{"name":"dss21.png","url":"/api/images/1527216871955dss21.png"}--{"name":"dss2313.png","url":"/api/images/1527216871958dss2313.png"}', '{"name":"bigimg_03.png","url":"/api/bigimages/1527216488708bigimg_03.png"}', 'false'),
-(54, '阿迪达斯鞋', 'Joan Sprot', 99, '阿迪达斯鞋阿迪达斯鞋阿迪达斯鞋阿迪达斯鞋阿迪达斯鞋阿迪达斯鞋', 0, 'false', '199', '2018-05-25 02:48:08', '运动鞋', '高邦', '{"name":"dss211.png","url":"/api/images/1527216900584dss211.png"}--{"name":"dss296.png","url":"/api/images/1527216900593dss296.png"}', '{"name":"bigimg_03.png","url":"/api/bigimages/1527216488708bigimg_03.png"}', 'false'),
-(55, '万行鞋', 'Joan Sprot', 756, '万行鞋万行鞋万行鞋万行鞋万行鞋万行鞋万行鞋万行鞋万行鞋', 0, 'false', '199', '2018-05-25 02:48:08', '运动鞋', '高邦', '{"name":"dss2753.png","url":"/api/images/1527216928392dss2753.png"}--{"name":"dss962.png","url":"/api/images/1527216928400dss962.png"}', '{"name":"bigimg_03.png","url":"/api/bigimages/1527216488708bigimg_03.png"}', 'false');
+(53, '耐克鞋', 'Joan Sprot', 35666, '耐克鞋耐克鞋耐克鞋耐克鞋耐克鞋耐克鞋耐克鞋耐克鞋耐克鞋耐克鞋', 0, 'false', '199', '2018-05-25 02:48:08', '运动鞋', '高邦', '{"name":"shoes-12.png","url":"/api/images/1527829871706shoes-12.png"}', '{"name":"bigimg_03.png","url":"/api/bigimages/1527216488708bigimg_03.png"}', 'false'),
+(54, '阿迪达斯鞋', 'Joan Sprot', 99, '阿迪达斯鞋阿迪达斯鞋阿迪达斯鞋阿迪达斯鞋阿迪达斯鞋阿迪达斯鞋', 0, 'false', '199', '2018-05-25 02:48:08', '运动鞋', '高邦', '{"name":"shoes-11.png","url":"/api/images/1527829786519shoes-11.png"}', '{"name":"bigimg_03.png","url":"/api/bigimages/1527216488708bigimg_03.png"}', 'false'),
+(55, '万行鞋', 'Joan Sprot', 756, '万行鞋万行鞋万行鞋万行鞋万行鞋万行鞋万行鞋万行鞋万行鞋', 0, 'false', '199', '2018-05-25 02:48:08', '运动鞋', '高邦', '{"name":"dss962.png","url":"/api/images/1527216928400dss962.png"}--{"name":"discount-img1.png","url":"/api/images/1527831843477discount-img1.png"}', '{"name":"bigimg_03.png","url":"/api/bigimages/1527216488708bigimg_03.png"}', 'false');
 
 -- --------------------------------------------------------
 
@@ -244,7 +242,7 @@ ALTER TABLE `car`
 -- 使用表AUTO_INCREMENT `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 --
 -- 使用表AUTO_INCREMENT `shoes`
 --
