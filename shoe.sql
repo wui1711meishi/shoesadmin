@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: 2018-06-01 05:45:13
+-- Generation Time: 2018-06-01 06:30:14
 -- 服务器版本： 5.7.14
 -- PHP Version: 5.6.25
 
@@ -114,7 +114,10 @@ INSERT INTO `orders` (`id`, `ordernumber`, `name`, `price`, `img`, `color`, `siz
 (50, '1527824468323', '李宁休闲鞋', 389, '/api/images/1527216578309dss1.png', 'red', '41码', 1, 52, '上海市  浦东区    金融中心大厦A栋1002室     020004    赵氏    151-3562-5443'),
 (51, '1527830582241', '鬼冢虎XV', 2600, '/api/images/1527829604794shoes-4.png', 'red', '41码', 1, 49, NULL),
 (52, '1527831404408', '李宁休闲鞋', 389, '/api/images/1527216578309dss1.png', 'red', '41码', 1, 52, '上海市  浦东区    金融中心大厦A栋1002室     020004    赵氏    151-3562-5443'),
-(53, '1527831524713', '李宁休闲鞋', 389, '/api/images/1527216578309dss1.png', 'red', '41码', 1, 52, NULL);
+(53, '1527831524713', '李宁休闲鞋', 389, '/api/images/1527216578309dss1.png', 'red', '41码', 1, 52, NULL),
+(54, '1527833918011', '迫使分鞋', 3666, '/api/images/1527216958056dss222222.png', 'blue', '41码', 1, 46, NULL),
+(55, '1527834206938', '打得过分鞋', 3999, '/api/images/1527216993319dss2123.png', 'green', '41码', 1, 47, '上海市  浦东区    金融中心大厦A栋1002室     020004    赵氏    151-3562-5443'),
+(56, '1527834327223', '打得过分鞋', 3999, '/api/images/1527216993319dss2123.png', 'green', '41码', 1, 47, NULL);
 
 -- --------------------------------------------------------
 
@@ -242,7 +245,7 @@ ALTER TABLE `car`
 -- 使用表AUTO_INCREMENT `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `id` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 --
 -- 使用表AUTO_INCREMENT `shoes`
 --
